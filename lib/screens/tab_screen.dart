@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/main_drawer.dart';
 
 import './categories_screen.dart';
 import './favourites.dart';
@@ -30,6 +31,7 @@ class _TabScreenState extends State<TabScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title'] as String),
       ),
+      drawer: MainDrawer(),
       // drawer: Drawer(
       //   backgroundColor: Theme.of(context).primaryColorDark,
       //   child: Text('drawer'),
