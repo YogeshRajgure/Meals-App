@@ -30,6 +30,10 @@ class _TabScreenState extends State<TabScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title'] as String),
       ),
+      // drawer: Drawer(
+      //   backgroundColor: Theme.of(context).primaryColorDark,
+      //   child: Text('drawer'),
+      // ),
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
@@ -37,7 +41,7 @@ class _TabScreenState extends State<TabScreen> {
         unselectedItemColor: Colors.white,
         selectedItemColor: Theme.of(context).accentColor,
         currentIndex: _selectedPageIndex,
-        type: BottomNavigationBarType.shifting,
+        // type: BottomNavigationBarType.shifting,
         items: [
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
