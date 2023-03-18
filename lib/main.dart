@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_3_meals_app/screens/meal_detail_screen.dart';
 
-import 'screens/categories_screen.dart';
-import 'screens/category_meals_screen.dart';
+import './screens/categories_screen.dart';
+import './screens/category_meals_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,17 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => const CategoriesScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailsScreen.routeName: (ctx) => MealDetailsScreen(),
+      },
+      // if you are goin to the pushNamed route that is not registered here,
+      // on generate route will kick in.
+      onGenerateRoute: (settings) {
+        // print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
+      // last resolve is this, if thisre is noting to show, or prevent app from crashing
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
