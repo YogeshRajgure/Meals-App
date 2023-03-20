@@ -7,7 +7,7 @@ import '../models/category.dart';
 import '../widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key});
+  const CategoriesScreen();
 
   @override
   Widget build(BuildContext context) {
