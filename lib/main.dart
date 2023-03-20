@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_3_meals_app/screens/filters_screen.dart';
 
 import './screens/categories_screen.dart';
 import './screens/category_meals_screen.dart';
@@ -43,7 +44,9 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => const TabScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailsScreen.routeName: (ctx) => MealDetailsScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
+
       // if you are goin to the pushNamed route that is not registered here,
       // on generate route will kick in.
       onGenerateRoute: (settings) {
