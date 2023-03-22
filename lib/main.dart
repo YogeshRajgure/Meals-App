@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_3_meals_app/dummy_data.dart';
-import 'package:flutter_project_3_meals_app/screens/filters_screen.dart';
 
+import './dummy_data.dart';
+import './models/meal.dart';
+import './screens/filters_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/tab_screen.dart';
-import './models/meal.dart';
 
 void main() {
   runApp(const MyApp());
